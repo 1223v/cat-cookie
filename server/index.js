@@ -32,7 +32,7 @@ app.post('/admin', function (req, res) {
 			
 		}
 	}
-	res.send('You are not Hyun_sik');
+	res.send('You are not Admin');
 });
 
 app.post('/login', function (req, res) {
@@ -47,9 +47,9 @@ app.post('/login', function (req, res) {
 });
 
 app.post('/registered', function (req, res) {
-	let catcookie = req.cookies;
+	let catcookie = req.cookies.catookie;
 	console.log(req.body);
-	/*
+	console.log(catcookie);
 	if(req.body.idx != "user"){
 		res.send(false);
 	}
@@ -83,7 +83,7 @@ app.post('/registered', function (req, res) {
 			};
 		}
 	}
-
+	
 	if (catcookie.body) {
 			const origin_catcookie = JSON.parse(catcookie.body);
 			if(catcookie.body.id === req.body.id || catcookie.body.password === req.body.password){
@@ -91,11 +91,13 @@ app.post('/registered', function (req, res) {
 			}
 			cats[catcookie.body.id] = {};
 			cats[catcookie.body.id][origin_catcookie.id] = origin_catcookie.password;
+			res.send(true);
 		} else {
 			cats[catcookie.idx][catcookie.id] = catcookie.password;
+			res.send(true);
 		}
-		*/
-	res.send(catcookie);
+		
+	
 });
 
 

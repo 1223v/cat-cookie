@@ -11,7 +11,7 @@ const Register = () => {
 	const secret = 'secret';
 
 	useEffect(() => {
-		Axios.get('https://cat-pcookie-cbt.run.goorm.io/hello').then((response) => {
+		Axios.get('http://localhost:5000/hello').then((response) => {
 			console.log(response.data);
 		});
 	}, []);
@@ -48,7 +48,7 @@ const Register = () => {
 		
 		await sleep(1000,data);
 		
-		Axios.post('https://cat-pcookie-cbt.run.goorm.io/registered', body, { withCredentials: true }).then((response) => {
+		Axios.post('http://localhost:5000/registered', body, { withCredentials: true }).then((response) => {
 			if (response.data) {
 				navigate('/');
 				console.log(response.data);
