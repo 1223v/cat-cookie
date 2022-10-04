@@ -6,9 +6,9 @@ const app = express();
 const port = 5000;
 var cors = require('cors');
 
-let Hyun_sik = { admin: 'C4tpc00ki3_super_Secret_Password' }; //I can't show you my password -1223v-
+let Hyun_sik = { admin: 'I can not show your my password' }; //I can't show you my password -1223v-
 let cats = {};
-let flag = "2022_HolyShield_CTF{C4T_PR0T0_C00KI3s_v3ry_Yummy}";
+let flag = "I can not show your my flag";
 
 app.use(
   cors({
