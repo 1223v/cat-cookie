@@ -102,9 +102,5 @@ app.post('/registered', function (req, res) {
 
 
 
-app.post('/idx', function (req, res) {
-	cats[req.body.idx] = {};
-	res.send(req.body.idx + ' idx add');
-});
 
 app.listen(port, () => console.log(`listen on 5000`));
