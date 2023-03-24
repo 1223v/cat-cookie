@@ -45,3 +45,7 @@ goormIDE is a powerful cloud IDE service to maximize productivity for developers
 
 Visit [https://ide.goorm.io](https://ide.goorm.io) to support and learn more about using goormIDE.  
 To watch some usage guides, visit [https://help.goorm.io/en/goormide](https://help.goorm.io/en/goormide)
+
+
+docker build -t
+docker run -p 5000:5000
